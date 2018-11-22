@@ -1,5 +1,6 @@
 package com.yongf.android.contactsapp.domain.interactor;
 
+import com.yongf.android.contactsapp.TestMyRobolectricRunner;
 import com.yongf.android.contactsapp.domain.executor.base.Executor;
 import com.yongf.android.contactsapp.domain.executor.base.MainThread;
 import com.yongf.android.contactsapp.domain.executor.impl.MainThreadImpl;
@@ -13,7 +14,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.robolectric.RobolectricTestRunner;
+import org.robolectric.annotation.Config;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,8 @@ import static org.mockito.Mockito.when;
  * @author scottwang1996@qq.com
  * @since 2018/11/22.
  */
-@RunWith(RobolectricTestRunner.class)
+@Config(sdk = 25)
+@RunWith(TestMyRobolectricRunner.class)
 public class GetMarvelHeroesTest {
 
     @Mock
